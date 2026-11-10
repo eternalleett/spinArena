@@ -24,22 +24,22 @@ jobs:
           node check-vision.cjs
           node check-continuous.cjs
           node check-launch.cjs
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
   deploy:
     needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      actions: read
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v6
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v4
-        with:
-          path: dist
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
