@@ -1,0 +1,115 @@
+{
+  "source": "https://github.com/ammarmuflih/AssistX_Assessment/blob/master/6.mp4",
+  "sourceFPS": 30,
+  "segment": [
+    12,
+    15
+  ],
+  "analysisSize": [
+    270,
+    480
+  ],
+  "frames": 90,
+  "available": [
+    90,
+    90
+  ],
+  "manualReferenceSamples": 6,
+  "meanSampleErrorPixels": 7.374867639030339,
+  "maxSampleErrorPixels": 18.416651721463985,
+  "processingMedianMS": 2.2247420000000204,
+  "processingP95MS": 9.134033000000017,
+  "samples": [
+    {
+      "time": 12,
+      "A": {
+        "detected": true,
+        "x": 321.5704750687083,
+        "y": 514.3557126030624,
+        "errorSourcePixels": 4.33057699295998
+      },
+      "B": {
+        "detected": true,
+        "x": 185.97390272835113,
+        "y": 728.0759193357057,
+        "errorSourcePixels": 5.304984671935308
+      }
+    },
+    {
+      "time": 12.5,
+      "A": {
+        "detected": true,
+        "x": 332.8159203980099,
+        "y": 600.780711825488,
+        "errorSourcePixels": 4.527933221941604
+      },
+      "B": {
+        "detected": true,
+        "x": 122.58064516129032,
+        "y": 584.3978494623657,
+        "errorSourcePixels": 3.602680108721346
+      }
+    },
+    {
+      "time": 13,
+      "A": {
+        "detected": true,
+        "x": 422.42698725628105,
+        "y": 611.4079785034775,
+        "errorSourcePixels": 18.416651721463985
+      },
+      "B": {
+        "detected": true,
+        "x": 313.64705882352945,
+        "y": 265.98692810457516,
+        "errorSourcePixels": 4.647077208718713
+      }
+    },
+    {
+      "time": 13.5,
+      "A": {
+        "detected": true,
+        "x": 186.49554367201426,
+        "y": 598.4627450980392,
+        "errorSourcePixels": 9.955810543587349
+      },
+      "B": {
+        "detected": true,
+        "x": 454.7469879518073,
+        "y": 170.57670682730924,
+        "errorSourcePixels": 5.6977254883606
+      }
+    },
+    {
+      "time": 14,
+      "A": {
+        "detected": true,
+        "x": 201.54713313896988,
+        "y": 623.7874959507612,
+        "errorSourcePixels": 16.304902871156358
+      },
+      "B": {
+        "detected": true,
+        "x": 316.3895486935867,
+        "y": 439.19556611243075,
+        "errorSourcePixels": 3.2339453984375086
+      }
+    },
+    {
+      "time": 14.5,
+      "A": {
+        "detected": true,
+        "x": 319.15522703273496,
+        "y": 619.5564941921858,
+        "errorSourcePixels": 6.445375282093877
+      },
+      "B": {
+        "detected": true,
+        "x": 373.5573053368329,
+        "y": 157.1443569553806,
+        "errorSourcePixels": 6.030748158987443
+      }
+    }
+  ],
+  "limitations": "Only six sampled frames; not exhaustive identity-switch or tracking-loss measurement. Older stadium has no Xtreme pockets; cannot validate Xtreme/Over/Reverse rules from this clip. Appearance availability is not classification accuracy. CPU measurements exclude capture, decode, replay serialization and display."
+}
