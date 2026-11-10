@@ -1,0 +1,45 @@
+name: Test and deploy Spin Arena
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check JavaScript and scoring regressions
+        run: |
+          node --version
+          node --check dist/vision-core.js
+          node --check dist/continuous-core.js
+          node --check dist/launch-core.js
+          node --check dist/vision.js
+          node check.mjs
+          node check-vision.cjs
+          node check-continuous.cjs
+          node check-launch.cjs
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
